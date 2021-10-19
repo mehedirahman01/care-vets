@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "name": "General Treatment",
+        "details": "Check for any unusual condition or regular treatments",
+        "fee": 500,
+        "img": "https://i.imgur.com/TbfeD2b.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Deworming",
+        "details": "Getting rid of worms referring to are intestinal parasites.",
+        "fee": 200,
+        "img": "https://i.imgur.com/DhFlRkU.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Vaccination",
+        "details": "Core pet vaccinations are recommended for every pet",
+        "fee": 400,
+        "img": "https://i.imgur.com/H0oCZ66.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Castration(Male)",
+        "details": "Neutering a pet – castration in the male curbs unwanted behavioural patterns ",
+        "fee": 1500,
+        "img": "https://i.imgur.com/2aXRGQs.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Spaying",
+        "details": "Spaying the female (removal of ovaries and uterus) reduces the risk of certain diseases",
+        "fee": 1500,
+        "img": "https://i.imgur.com/wJWjko1.jpg"
+    },
+    {
+        "id": 6,
+        "name": "C-Section",
+        "details": "A C-section is major surgery performed to remove kittens from the uterus",
+        "fee": 2500,
+        "img": "https://i.imgur.com/1Q6LMWW.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Upper Patellar Fixation",
+        "details": "This surgery is recommended when clinical signs are present",
+        "fee": 3000,
+        "img": "https://i.imgur.com/368Jbo7.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Gynaecology",
+        "details": "Gynaecological examinations and treatments",
+        "fee": 1000,
+        "img": "https://i.imgur.com/WX9CKVm.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Diagnosis",
+        "details": "Different kinds of diagnosis using high-end machines",
+        "fee": 2000,
+        "img": "https://i.imgur.com/3ONdZZD.png"
+    }
+]
