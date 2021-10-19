@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import HomeService from '../HomeService/HomeService';
-import './HomeServices.css'
+import Service from '../Service/Service';
+import './Services.css'
 
-const HomeServices = () => {
+const Services = () => {
     const [services, setServices] = useState([])
 
     useEffect(() => {
@@ -12,18 +12,17 @@ const HomeServices = () => {
             .catch(error => (console.log(error)));
     }, [])
 
-    const selectedServices = services.slice(0, 6)
-
     return (
         <div id="cards_landscape_wrap-2" className="service-container pt-4">
-            <h1 className="m-0">Our Top Services</h1>
+
+            <h1 className="m-0">Services</h1>
             <div class="container">
                 <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1 g-4">
                     {
-                        selectedServices.map(service => <HomeService
+                        services.map(service => <Service
                             key={service.id}
                             service={service}
-                        ></HomeService>)
+                        ></Service>)
                     }
                 </div>
             </div>
@@ -31,4 +30,4 @@ const HomeServices = () => {
     );
 };
 
-export default HomeServices;
+export default Services;

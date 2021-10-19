@@ -10,12 +10,10 @@ const Home = () => {
     return (
         <div>
             {/* Call Homepage Components */}
-            <Header></Header>
             <Cover></Cover>
             <HomeServices></HomeServices>
             <WhyChooseUs></WhyChooseUs>
             <ClientFeedback></ClientFeedback>
-            <Footer></Footer>
         </div>
     );
 };
