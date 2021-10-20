@@ -11,6 +11,9 @@ import RegisterPage from './Pages/RegisterPage/RegisterPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import ServiceDetailPage from './Pages/ServiceDetailPage/ServiceDetailPage';
+import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
+import BookingsPage from './Pages/BookingsPage/BookingsPage';
 
 function App() {
   return (
@@ -34,10 +37,21 @@ function App() {
               <Services></Services>
             </Route>
 
-            {/* Location Page */}
-            <PrivateRoute exact path="/location">
-              <LocationPage></LocationPage>
+            {/* Service Detail Page */}
+            <PrivateRoute exact path="/services/:serviceId">
+              <ServiceDetailPage></ServiceDetailPage>
             </PrivateRoute>
+
+            {/* Bookings Page */}
+            <PrivateRoute exact path="/bookings">
+              <BookingsPage></BookingsPage>
+            </PrivateRoute>
+
+
+            {/* Location Page */}
+            <Route exact path="/location">
+              <LocationPage></LocationPage>
+            </Route>
 
             {/* Contact Page */}
             <Route exact path="/contact">
@@ -54,12 +68,10 @@ function App() {
               <LoginPage></LoginPage>
             </Route>
 
-
-
             {/* Error Page */}
-            {/* <Route exact path="*">
-            <NotFound></NotFound>
-          </Route> */}
+            <Route exact path="*">
+              <NotFoundPage></NotFoundPage>
+            </Route>
 
           </Switch>
 
@@ -67,7 +79,7 @@ function App() {
 
         </Router>
       </AuthProvider>
-    </div>
+    </div >
   );
 }
 

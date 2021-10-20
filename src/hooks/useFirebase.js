@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, signOut, onAuthStateChanged, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication()
@@ -12,6 +12,7 @@ const useFirebase = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const googleProvider = new GoogleAuthProvider();
 
 
     const handleNameChange = e => {
@@ -29,7 +30,6 @@ const useFirebase = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user
-                setUser(user)
                 setUserName();
                 setError('')
             })
@@ -73,6 +73,18 @@ const useFirebase = () => {
             })
     }
 
+    const signInUsingGoogle = () => {
+        signInWithPopup(auth, googleProvider)
+            .then(result => {
+                console.log(result.user)
+                setUser(result.user)
+                setError('')
+            })
+            .catch(error => {
+                setError(error.message)
+            })
+    }
+
     // useEffect(() => {
     //     onAuthStateChanged(auth, (user) => {
     //         if (user) {
@@ -84,7 +96,7 @@ const useFirebase = () => {
 
 
 
-    return { handleNameChange, handleEmailChange, handlePasswordChange, handleRegistration, handleLogin, handleLogout, user, email, password, error };
+    return { handleNameChange, handleEmailChange, handlePasswordChange, handleRegistration, handleLogin, handleLogout, signInUsingGoogle, user, email, password, error };
 };
 
 export default useFirebase;

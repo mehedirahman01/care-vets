@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 
 const RegisterPage = () => {
@@ -27,6 +28,7 @@ const RegisterPage = () => {
                         </div>
                     </div>
                 </form>
+                <h6 className="pt-2">Already Registered <Link to="/login">Login Here</Link></h6>
             </div>
         </div>
     );

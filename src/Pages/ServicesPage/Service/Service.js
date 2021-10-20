@@ -1,8 +1,15 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import './Service.css'
 
 const Service = (props) => {
-    const { name, details, fee, img } = props.service
+    const { id, name, details, fee, img } = props.service
+    const history = useHistory()
+
+    const handleClick = () => {
+        history.push(`/services/${id}`)
+    }
+
     return (
         // Service Card
         <div className="col m-0">
@@ -18,7 +25,7 @@ const Service = (props) => {
                         <li className="list-group-item"> <h6>Approx. Fee: {fee}</h6></li>
                     </ul>
                 </div>
-                <div className="card-footer border-success"><button className="btn btn-outline-success">Book Appointment</button></div>
+                <div onClick={handleClick} className="card-footer border-success"><button className="btn btn-outline-success">Book Appointment</button></div>
             </div>
         </div>
     );
