@@ -1,4 +1,5 @@
 import React from 'react';
+// import react icon
 import { FaDog, FaCalendarCheck, FaHome, FaChild } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 
@@ -7,6 +8,7 @@ const WhyChooseUs = () => {
         <div className="container my-5 py-5">
             <h1>Why Choose Us</h1>
             <div className="row py-5">
+                {/* First Item */}
                 <div className="col-lg-3 col-6">
                     <IconContext.Provider value={{ size: "3em", color: "#03B86B" }}>
                         <div>
@@ -18,6 +20,7 @@ const WhyChooseUs = () => {
                     </IconContext.Provider>
                 </div>
 
+                {/* Second Item */}
                 <div className="col-lg-3 col-6">
                     <IconContext.Provider value={{ size: "2.5em", color: "#03B86B" }}>
                         <div>
@@ -29,6 +32,7 @@ const WhyChooseUs = () => {
                     </IconContext.Provider>
                 </div>
 
+                {/* Third Item */}
                 <div className="col-lg-3 col-6">
                     <IconContext.Provider value={{ size: "2.5em", color: "#03B86B" }}>
                         <div>
@@ -40,6 +44,7 @@ const WhyChooseUs = () => {
                     </IconContext.Provider>
                 </div>
 
+                {/* Fouth Item */}
                 <div className="col-lg-3 col-6">
                     <IconContext.Provider value={{ size: "2.5em", color: "#03B86B" }}>
                         <div>

@@ -4,7 +4,7 @@ import './HomeServices.css'
 
 const HomeServices = () => {
     const [services, setServices] = useState([])
-
+    // Fetch and set data
     useEffect(() => {
         fetch('./services.json')
             .then(res => res.json())
@@ -12,13 +12,14 @@ const HomeServices = () => {
             .catch(error => (console.log(error)));
     }, [])
 
+    // Slice First 6 Services
     const selectedServices = services.slice(0, 6)
 
     return (
         <div id="cards_landscape_wrap-2" className="service-container pt-4">
             <h1 className="m-0">Our Top Services</h1>
-            <div class="container">
-                <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1 g-4">
+            <div className="container">
+                <div className="row row-cols-lg-3 row-cols-md-3 row-cols-1 g-4">
                     {
                         selectedServices.map(service => <HomeService
                             key={service.id}
